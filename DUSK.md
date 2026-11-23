@@ -46,12 +46,28 @@ See [desktop/README.md](desktop/README.md).
 
 ## Phone (iOS / Android)
 
+iPhone (unsigned IPA):
+
 ```sh
 npm ci
 DUSK_BUNDLE_ID=io.github.zxypablo11.dusk bash tools/build-dusk-ios.sh
 ```
 
-Unsigned IPA → sign with your sideloading tool. Workflow: `.github/workflows/dusk-ios.yml`.
+Workflow: `.github/workflows/dusk-ios.yml`.
+
+Android APK:
+
+```sh
+bash tools/build-dusk-android.sh
+```
+
+Output: `dist/Dusk.apk`. Workflow: `.github/workflows/dusk-android.yml` (also uploads to the `v1.3.10` release).
+
+README iOS shots:
+
+```sh
+python tools/make-readme-ios-shots.py
+```
 
 ## Design
 

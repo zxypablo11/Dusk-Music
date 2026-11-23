@@ -6,7 +6,13 @@ No ads. No account. No subscription. Stream from YouTube, YouTube Music, and Sou
 
 Dusk Music is an **independent** open-source project ([MIT](LICENSE)) by [zxypablo11](https://github.com/zxypablo11). It is not Riff, not Muriel, and not affiliated with those projects. It does not host music. Use it for private listening, and only keep tracks you have the right to keep. See [LEGAL.md](LEGAL.md).
 
-![Dusk Music](design/dusk/app-integrated.jpg)
+![Dusk Music on iPhone — Home, Now Playing, Settings](design/dusk/readme-ios-trio.jpg)
+
+<p align="center">
+  <img src="design/dusk/readme-ios-home.jpg" width="220" alt="Dusk iPhone — Home" />
+  <img src="design/dusk/readme-ios-player.jpg" width="220" alt="Dusk iPhone — Now Playing" />
+  <img src="design/dusk/readme-ios-settings.jpg" width="220" alt="Dusk iPhone — Settings" />
+</p>
 
 ## Download
 
@@ -16,6 +22,7 @@ Latest release: **[v1.3.10](https://github.com/zxypablo11/Dusk-Music/releases/ta
 |----------|------|
 | **Windows** | [Dusk-Music-Setup-Windows-x64.exe](https://github.com/zxypablo11/Dusk-Music/releases/download/v1.3.10/Dusk-Music-Setup-Windows-x64.exe) |
 | **iPhone** | [Dusk.ipa](https://github.com/zxypablo11/Dusk-Music/releases/download/v1.3.10/Dusk.ipa) (unsigned — sign with SideStore / AltStore / Sideloadly) |
+| **Android** | [Dusk.apk](https://github.com/zxypablo11/Dusk-Music/releases/download/v1.3.10/Dusk.apk) (builds via Actions — may appear shortly after each push) |
 
 Site: https://zxypablo11.github.io/Dusk-Music/
 
@@ -25,7 +32,7 @@ Site: https://zxypablo11.github.io/Dusk-Music/
 |----------|--------------|
 | **Windows** | Native desktop shell (Tauri) — sidebar, playbar, volume, optional Discord presence |
 | **iPhone** | Capacitor IPA — lock screen / Control Center friendly after sideload |
-| **Android** | Capacitor APK (build from source until an APK is attached to a release) |
+| **Android** | Capacitor APK — download above, or `bash tools/build-dusk-android.sh` |
 | **Browser** | Local preview of the shared UI |
 
 One player core; each shell fits the device. Technical notes: [DUSK.md](DUSK.md).

@@ -1,0 +1,82 @@
+name: Dusk Android APK
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'android/**'
+      - 'mobile/**'
+      - 'capacitor.config.json'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'tools/build-dusk-android.sh'
+      - '.github/workflows/dusk-android.yml'
+      - 'app.js'
+      - 'index.html'
+      - 'server.js'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dusk-android
+  cancel-in-progress: true
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      ELECTRON_SKIP_BINARY_DOWNLOAD: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+          cache: gradle
+
+      - name: Build Dusk.apk
+        env:
+          DUSK_VERSION_CODE: ${{ github.run_number }}
+          DUSK_KEYSTORE_B64: ${{ secrets.DUSK_KEYSTORE_B64 }}
+          DUSK_KEYSTORE_PASSWORD: ${{ secrets.DUSK_KEYSTORE_PASSWORD }}
+          DUSK_KEY_PASSWORD: ${{ secrets.DUSK_KEY_PASSWORD }}
+          DUSK_KEY_ALIAS: ${{ secrets.DUSK_KEY_ALIAS }}
+        run: |
+          if [ -n "${DUSK_KEYSTORE_B64:-}" ]; then
+            echo "$DUSK_KEYSTORE_B64" | base64 -d > "$RUNNER_TEMP/dusk-release.p12"
+            export DUSK_KEYSTORE="$RUNNER_TEMP/dusk-release.p12"
+            export DUSK_KEY_ALIAS="${DUSK_KEY_ALIAS:-dusk}"
+            export DUSK_KEY_PASSWORD="${DUSK_KEY_PASSWORD:-$DUSK_KEYSTORE_PASSWORD}"
+          fi
+          bash tools/build-dusk-android.sh
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Dusk-Android
+          path: dist/Dusk.apk
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Attach APK to latest release (v1.3.10)
+        if: github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if gh release view v1.3.10 >/dev/null 2>&1; then
+            gh release upload v1.3.10 dist/Dusk.apk --clobber
+          else
+            gh release create android-latest dist/Dusk.apk \
+              --prerelease \
+              --title "Dusk Music for Android (latest)" \
+              --notes "Install Dusk.apk on your phone. Allow installs from this source if Android asks."
+          fi
