@@ -12,13 +12,13 @@ const now = new Date().toISOString();
 const size = fs.statSync('Dusk.ipa').size;
 
 const app = {
-  name: 'Dusk',
-  bundleIdentifier: 'io.github.cloverscripts.dusk',
-  developerName: 'cloverscripts',
+  name: 'Dusk Music',
+  bundleIdentifier: 'io.github.zxypablo11.dusk',
+  developerName: 'zxypablo11',
   subtitle: 'Free music player',
   iconURL: icon,
   tintColor: '7C4DFF',
-  localizedDescription: 'Free, ad-free music player. Stream from YouTube, YouTube Music and SoundCloud, synced lyrics, offline songs, playlists and recommendations. Based on Dusk by rootscripts (MIT). Independent and non-commercial, not affiliated with YouTube, SoundCloud or Spotify.',
+  localizedDescription: 'Dusk Music — free, ad-free music player by zxypablo11. Stream from YouTube, YouTube Music and SoundCloud, synced lyrics, offline songs, playlists and recommendations. Independent open source (MIT). Not affiliated with YouTube, SoundCloud, Spotify, Riff or Muriel.',
   screenshotURLs: ['home', 'player', 'search'].map((n) => `https://raw.githubusercontent.com/${REPO}/${SHA}/site/shots/${n}.jpg`),
   versions: [{ version, buildVersion: String(RUN), date: now, size, downloadURL: ipa, minOSVersion: '15.0' }],
   version, versionDate: now, size, downloadURL: ipa,
@@ -26,8 +26,8 @@ const app = {
 };
 
 fs.writeFileSync('sidestore.json', JSON.stringify({
-  name: 'Dusk',
-  identifier: 'io.github.cloverscripts.dusk.source',
+  name: 'Dusk Music',
+  identifier: 'io.github.zxypablo11.dusk.source',
   iconURL: icon,
   website: `https://${REPO.split('/')[0]}.github.io/${REPO.split('/')[1]}/`,
   tintColor: '7C4DFF',

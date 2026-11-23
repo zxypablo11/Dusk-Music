@@ -3628,7 +3628,7 @@ async function handleEncode(req, res, parsedUrl) {
 }
 
 const { parseForLyrics, pickBest } = require('./lyrics-match');
-const LRCLIB_UA = 'Dusk (https://github.com/cloverscripts/riff-muriel)';
+const LRCLIB_UA = 'Dusk (https://github.com/zxypablo11/Dusk-Music)';
 
 function lrclibJson(pathAndQuery) {
   return new Promise((resolve) => {

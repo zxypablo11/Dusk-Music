@@ -9,7 +9,7 @@ export function buildInfo(channel = '') {
     sha: process.env.GITHUB_SHA || 'dev',
     version: pkgVersion(),
     run: Number(process.env.GITHUB_RUN_NUMBER) || 0,
-    repo: process.env.GITHUB_REPOSITORY || 'cloverscripts/riff-muriel',
+    repo: process.env.GITHUB_REPOSITORY || 'zxypablo11/Dusk-Music',
     builtAt: new Date().toISOString(),
     channel,
   };

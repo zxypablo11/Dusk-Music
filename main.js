@@ -109,7 +109,7 @@ function runGUI() {
 
   let mainWindow = null;
   // Must match build.appId so the NSIS shortcut, pinned icons and the running window share one taskbar identity.
-  if (process.platform === 'win32') app.setAppUserModelId('io.github.cloverscripts.dusk');
+  if (process.platform === 'win32') app.setAppUserModelId('io.github.zxypablo11.dusk');
   const gotLock = app.requestSingleInstanceLock();
   if (!gotLock) { app.quit(); return; }
   app.on('second-instance', () => {

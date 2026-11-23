@@ -28,8 +28,8 @@ Dusk works with.
 
 **For rights holders**
 If you believe Dusk infringes your rights, please contact us first and we will look at it promptly:
-open a [rights holder request](https://github.com/cloverscripts/riff-muriel/issues/new?template=rights-holder-request.yml)
-on GitHub. Tell us which content or feature is concerned and how to reach you; personal details don't need
+open a [GitHub issue](https://github.com/zxypablo11/Dusk-Music/issues/new)
+on [zxypablo11/Dusk-Music](https://github.com/zxypablo11/Dusk-Music). Tell us which content or feature is concerned and how to reach you; personal details don't need
 to be posted publicly, ask for a private channel instead. You can also use
 [GitHub's DMCA process](https://docs.github.com/en/site-policy/content-removal-policies/dmca-takedown-policy).
 
@@ -61,7 +61,8 @@ nur genannt, um zu beschreiben, womit Dusk funktioniert.
 **Für Rechteinhaber**
 Wenn du der Meinung bist, dass Dusk deine Rechte verletzt, melde dich bitte zuerst bei uns, wir kümmern uns
 umgehend darum: Eröffne auf GitHub eine
-[Anfrage für Rechteinhaber](https://github.com/cloverscripts/riff-muriel/issues/new?template=rights-holder-request.yml).
+[GitHub-Issue](https://github.com/zxypablo11/Dusk-Music/issues/new)
+auf [zxypablo11/Dusk-Music](https://github.com/zxypablo11/Dusk-Music).
 Nenne die betroffenen Inhalte oder Funktionen und wie wir dich erreichen; persönliche Daten müssen nicht
 öffentlich gepostet werden, frag stattdessen nach einem privaten Kontakt. Alternativ steht das
 [DMCA-Verfahren von GitHub](https://docs.github.com/en/site-policy/content-removal-policies/dmca-takedown-policy)

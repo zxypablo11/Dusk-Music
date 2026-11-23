@@ -1,15 +1,13 @@
-## Dusk 1.3.10
+## Dusk Music 1.3.10
 
-Dusk is a **free music player for everyone** — Windows, macOS, Linux, iPhone, Android. No ads, no account.
+**Dusk Music** is an independent free music player (zxypablo11) — Windows, iPhone, Android, browser. No ads, no account. Not affiliated with Riff or Muriel.
 
-**Downloads**
-- **Windows:** installer below, or the portable exe on [windows-latest](https://github.com/cloverscripts/riff-muriel/releases/tag/windows-latest)
-- **macOS:** `.dmg` / `.zip` below, for Apple Silicon and Intel. The app is unsigned: if macOS blocks it, open System Settings → Privacy & Security → Open Anyway.
-- **Linux:** `.AppImage` below (needs FUSE 2: `fuse2` / `libfuse2`)
-- **iPhone:** [ios-latest](https://github.com/cloverscripts/riff-muriel/releases/tag/ios-latest) (`Dusk.ipa`, install with SideStore, AltStore or Sideloadly). Needs iOS 16.2 or newer
-- **Android:** [android-latest](https://github.com/cloverscripts/riff-muriel/releases/tag/android-latest) (`Dusk.apk`)
+**Downloads** (this repo only: [zxypablo11/Dusk-Music](https://github.com/zxypablo11/Dusk-Music/releases))
+- **Windows:** installer / portable exe attached to the release (or build from `desktop/`)
+- **iPhone:** unsigned `Dusk.ipa` (Actions artifact or release asset) — sign with SideStore, AltStore or Sideloadly. Needs iOS 16.2+
+- **Android:** `Dusk.apk` when published on the release
+- **Website:** https://zxypablo11.github.io/Dusk-Music/
 
-Or get it from the website: https://cloverscripts.github.io/riff-muriel/
 **Fixed**
 - **Artist page:** the line under Songs/Albums is a faint divider instead of a dark stripe on bright wallpapers.
 - **No sideways scrolling** in playlists and Favorites.

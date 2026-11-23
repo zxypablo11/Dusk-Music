@@ -307,7 +307,7 @@
   function shareText(st) {
     const lines = [I18n.Tf('My Dusk Encore ({0})', I18n.T(PERIODS[st.period])), I18n.Tf('{0} minutes of music', st.minutes.toLocaleString())];
     st.songs.slice(0, 5).forEach((s, i) => lines.push(`${i + 1}. ${s.title} - ${s.artist}`));
-    lines.push('', `${I18n.T('Dusk: free music app, no ads, no login.')} github.com/cloverscripts/riff-muriel`);
+    lines.push('', `${I18n.T('Dusk: free music app, no ads, no login.')} github.com/zxypablo11/Dusk-Music`);
     return lines.join('\n');
   }
   async function share(st) {

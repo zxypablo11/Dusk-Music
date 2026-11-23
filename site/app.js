@@ -1,7 +1,7 @@
 // Dusk's site. Picks the right download for the visitor's device and shows live numbers from GitHub:
 // the download counter, file sizes, the latest desktop version, how old the newest build is, and stars.
 (() => {
-  const REPO = 'cloverscripts/riff-muriel';
+  const REPO = 'zxypablo11/Dusk-Music';
   const API = `https://api.github.com/repos/${REPO}`;
   const SOURCE_URL = `https://github.com/${REPO}/releases/download/ios-latest/sidestore.json`;
   const REFRESH_MS = 90 * 1000; // GitHub allows 60 unauthenticated requests an hour per visitor

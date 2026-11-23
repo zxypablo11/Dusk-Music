@@ -1,5 +1,8 @@
 # Dusk on Nix
 
+> Packaging notes inherited from older upstream trees. The product repo is
+> [zxypablo11/Dusk-Music](https://github.com/zxypablo11/Dusk-Music) — independent of Riff/Muriel.
+
 The `flake.nix` exposes three things:
 
 - `packages.dusk` (also `packages.default`) — the installable app

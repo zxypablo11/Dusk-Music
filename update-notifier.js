@@ -20,7 +20,7 @@
     const ctrl = new AbortController();
     const timer = setTimeout(() => ctrl.abort(), 10000);
     try {
-      const res = await fetch(`https://api.github.com/repos/${build.repo || 'cloverscripts/riff-muriel'}/releases/tags/${tag}`, { headers: { Accept: 'application/vnd.github+json' }, signal: ctrl.signal });
+      const res = await fetch(`https://api.github.com/repos/${build.repo || 'zxypablo11/Dusk-Music'}/releases/tags/${tag}`, { headers: { Accept: 'application/vnd.github+json' }, signal: ctrl.signal });
       if (!res.ok) return null;
       return await res.json();
     } catch (e) {
