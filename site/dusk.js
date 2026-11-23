@@ -1,10 +1,15 @@
 (() => {
   const REPO = "zxypablo11/Dusk-Music";
-  const RELEASES = `https://github.com/${REPO}/releases`;
+  const TAG = "v1.3.10";
+  const DL = {
+    windows: `https://github.com/${REPO}/releases/download/${TAG}/Dusk-Music-Setup-Windows-x64.exe`,
+    ios: `https://github.com/${REPO}/releases/download/${TAG}/Dusk.ipa`,
+    android: `https://github.com/${REPO}/releases/download/${TAG}/Dusk.apk`,
+  };
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
-  // Device-aware primary CTA
+  // Device-aware primary CTA → direct GitHub release asset (one-click download)
   const ua = navigator.userAgent;
   const touchMac = navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1;
   const os = /iPhone|iPad|iPod/.test(ua) || touchMac
@@ -14,20 +19,20 @@
       : /Windows/i.test(ua)
         ? "windows"
         : "other";
-  const primary = document.getElementById("primary-get");
-  const primaryLabel = document.getElementById("primary-get-label");
-  if (primary && primaryLabel) {
-    if (os === "windows") {
-      primary.href = RELEASES;
-      primaryLabel.textContent = "Windows";
-    } else if (os === "ios") {
-      primary.href = `https://github.com/${REPO}`;
-      primaryLabel.textContent = "iPhone";
-    } else if (os === "android") {
-      primary.href = `https://github.com/${REPO}`;
-      primaryLabel.textContent = "Android";
-    }
+  const pick = os === "ios" ? "ios" : os === "android" ? "android" : "windows";
+  const labels = { windows: "Windows", ios: "iPhone", android: "Android" };
+
+  function wireDownload(el, labelEl) {
+    if (!el) return;
+    el.href = DL[pick];
+    el.setAttribute("download", "");
+    if (labelEl) labelEl.textContent = labels[pick];
   }
+  wireDownload(document.getElementById("primary-get"), document.getElementById("primary-get-label"));
+  wireDownload(document.getElementById("hero-get"), document.getElementById("hero-get-label"));
+  wireDownload(document.getElementById("nav-get"), null);
+  const heroLabel = document.getElementById("hero-get-label");
+  if (heroLabel) heroLabel.textContent = `Get Dusk · ${labels[pick]}`;
 
   fetch(`stats.json?t=${Math.floor(Date.now() / 60000)}`, { cache: "no-store" })
     .then((r) => (r.ok ? r.json() : null))
