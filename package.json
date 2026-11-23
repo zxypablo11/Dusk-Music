@@ -14,7 +14,7 @@
     "release:major": "npm version major && git push --follow-tags"
   },
   "keywords": [],
-  "author": "cloverscripts",
+  "author": "zxypablo11",
   "license": "MIT",
   "description": "Dusk Music — a free music player for everyone.",
   "devDependencies": {
@@ -41,16 +41,16 @@
     "tone": "^15.1.22"
   },
   "productName": "Dusk Music",
-  "homepage": "https://github.com/cloverscripts/riff-muriel",
+  "homepage": "https://github.com/zxypablo11/Dusk-Music",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cloverscripts/riff-muriel.git"
+    "url": "git+https://github.com/zxypablo11/Dusk-Music.git"
   },
   "bugs": {
-    "url": "https://github.com/cloverscripts/riff-muriel/issues"
+    "url": "https://github.com/zxypablo11/Dusk-Music/issues"
   },
   "build": {
-    "appId": "io.github.cloverscripts.dusk",
+    "appId": "io.github.zxypablo11.dusk",
     "productName": "Dusk Music",
     "artifactName": "${name}-${version}-${os}-${arch}.${ext}",
     "directories": {
@@ -127,8 +127,8 @@
     "publish": [
       {
         "provider": "github",
-        "owner": "cloverscripts",
-        "repo": "riff-muriel",
+        "owner": "zxypablo11",
+        "repo": "Dusk-Music",
         "releaseType": "release"
       }
     ]

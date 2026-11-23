@@ -1,4 +1,4 @@
-package io.github.cloverscripts.muriel;
+package io.github.zxypablo11.dusk;
 
 import android.Manifest;
 import android.app.Activity;
@@ -102,8 +102,8 @@ public class MediaControlsPlugin extends Plugin {
     private String artworkUrl = "";
     private Bitmap artwork;
     // the extra buttons beside previous / next (Android 13+: in the quick-settings and lock-screen player)
-    static final String CUSTOM_SHUFFLE = "io.github.cloverscripts.muriel.SHUFFLE";
-    static final String CUSTOM_REPEAT = "io.github.cloverscripts.muriel.REPEAT";
+    static final String CUSTOM_SHUFFLE = "io.github.zxypablo11.dusk.SHUFFLE";
+    static final String CUSTOM_REPEAT = "io.github.zxypablo11.dusk.REPEAT";
     private boolean shuffle;
     private String repeat = "off"; // "off", "all" (the playlist) or "one" (the song)
     private PowerManager.WakeLock wakeLock;

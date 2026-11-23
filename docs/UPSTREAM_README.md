@@ -1,3 +1,8 @@
+# Upstream history (not Dusk Music)
+
+> **Archival only.** This file is the old Muriel/Riff README kept for history.
+> The product is **[Dusk Music](https://github.com/zxypablo11/Dusk-Music)** by zxypablo11 — independent, not Riff, not Muriel.
+
 # Muriel
 
 A lightweight desktop music player for Windows, Linux and macOS. Stream from YouTube, YouTube Music and SoundCloud, download for offline listening, and keep a local library — no account, no subscription.

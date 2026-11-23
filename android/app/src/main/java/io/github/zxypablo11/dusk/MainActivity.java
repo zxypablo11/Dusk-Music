@@ -1,4 +1,4 @@
-package io.github.cloverscripts.muriel;
+package io.github.zxypablo11.dusk;
 
 import android.os.Bundle;
 

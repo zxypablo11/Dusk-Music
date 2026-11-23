@@ -1,6 +1,8 @@
 # Dusk Music — technical notes
 
-Shared web UI and player core, with thin shells for Windows (Tauri), iPhone/Android (Capacitor), and local browser preview. Product overview: [README.md](README.md). Rights: [LEGAL.md](LEGAL.md). Upstream history: [docs/UPSTREAM_README.md](docs/UPSTREAM_README.md).
+Shared web UI and player core, with thin shells for Windows (Tauri), iPhone/Android (Capacitor), and local browser preview. Product overview: [README.md](README.md). Rights: [LEGAL.md](LEGAL.md).
+
+Dusk Music is independent (zxypablo11). Older notes under [docs/UPSTREAM_README.md](docs/UPSTREAM_README.md) are historical only and do not describe the product or affiliation.
 
 ## Layout
 
