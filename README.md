@@ -8,18 +8,29 @@ Dusk Music is an **independent** open-source project ([MIT](LICENSE)) by [zxypab
 
 ![Dusk Music](design/dusk/app-integrated.jpg)
 
+## Download
+
+Latest release: **[v1.3.10](https://github.com/zxypablo11/Dusk-Music/releases/tag/v1.3.10)**
+
+| Platform | File |
+|----------|------|
+| **Windows** | [Dusk-Music-Setup-Windows-x64.exe](https://github.com/zxypablo11/Dusk-Music/releases/download/v1.3.10/Dusk-Music-Setup-Windows-x64.exe) |
+| **iPhone** | [Dusk.ipa](https://github.com/zxypablo11/Dusk-Music/releases/download/v1.3.10/Dusk.ipa) (unsigned — sign with SideStore / AltStore / Sideloadly) |
+
+Site: https://zxypablo11.github.io/Dusk-Music/
+
 ## Platforms
 
-| Platform | How |
-|----------|-----|
-| **Windows** | Desktop app (Tauri) — sidebar, playbar, volume, optional Discord presence |
-| **iPhone** | Sideload the IPA (Capacitor) |
-| **Android** | Capacitor APK build |
-| **Browser** | Local web preview of the shared UI |
+| Platform | What you get |
+|----------|--------------|
+| **Windows** | Native desktop shell (Tauri) — sidebar, playbar, volume, optional Discord presence |
+| **iPhone** | Capacitor IPA — lock screen / Control Center friendly after sideload |
+| **Android** | Capacitor APK (build from source until an APK is attached to a release) |
+| **Browser** | Local preview of the shared UI |
 
 One player core; each shell fits the device. Technical notes: [DUSK.md](DUSK.md).
 
-## Quick start (browser)
+## Build from source (browser)
 
 Requires Node.js 22+.
 
