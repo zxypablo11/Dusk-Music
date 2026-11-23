@@ -6,6 +6,8 @@ No ads. No account. No subscription. Stream from YouTube, YouTube Music, and Sou
 
 Dusk Music is an **independent** open-source project ([MIT](LICENSE)) by [zxypablo11](https://github.com/zxypablo11). It is not Riff, not Muriel, and not affiliated with those projects. It does not host music. Use it for private listening, and only keep tracks you have the right to keep. See [LEGAL.md](LEGAL.md).
 
+![Dusk Music on Windows](design/dusk/readme-desktop.jpg)
+
 ![Dusk Music on iPhone — Home, Now Playing, Settings](design/dusk/readme-ios-trio.jpg)
 
 <p align="center">
